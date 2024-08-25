@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: url('https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg') no-repeat center center fixed;
+    background-size: cover;
+    animation: float 10s ease-in-out infinite;
+    perspective: 1000px; /* Adds perspective to the scene */
+  }
+  
+  @keyframes float {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  .app {
+    background: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* 3D shadow effect */
+    border: 5px solid transparent;
+    animation: glow 2s infinite alternate;
+    transform: rotateX(5deg) rotateY(-5deg); /* Adds slight 3D tilt */
+  }
+  
+  @keyframes glow {
+    0% {
+      border-color: red;
+      box-shadow: 0 0 10px red;
+    }
+    33% {
+      border-color: white;
+      box-shadow: 0 0 10px white;
+    }
+    66% {
+      border-color: green;
+      box-shadow: 0 0 10px green;
+    }
+    100% {
+      border-color: red;
+      box-shadow: 0 0 10px red;
+    }
+  }
+  
+  .app h1 {
+    font-size: 25px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  
+  .quiz {
+    padding: 20px 0;
+  }
+  
+  .quiz h2 {
+    font-size: 18px;
+    color: #001e4d;
+    font-weight: 600;
+  }
+  
+  .btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    transform: translateZ(0); /* 3D transformation hint */
+  }
+  
+  .btn:hover {
+    background: #222;
+    color: #fff;
+  }
+  
+  #next-btn {
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+    transform: translateZ(0); /* 3D transformation hint */
+  }
+  
+  .correct {
+    background: #9aeabc;
+    animation: correct-glow 1s ease-in-out;
+  }
+  
+  .incorrect {
+    background: #ff9393;
+    animation: incorrect-glow 1s ease-in-out;
+  }
+  
+  @keyframes correct-glow {
+    0% {
+      box-shadow: 0 0 10px #9aeabc, 0 0 20px #9aeabc, 0 0 30px #9aeabc;
+    }
+    100% {
+      box-shadow: 0 0 20px #9aeabc, 0 0 40px #9aeabc, 0 0 60px #9aeabc;
+    }
+  }
+  
+  @keyframes incorrect-glow {
+    0% {
+      box-shadow: 0 0 10px #ff9393, 0 0 20px #ff9393, 0 0 30px #ff9393;
+    }
+    100% {
+      box-shadow: 0 0 20px #ff9393, 0 0 40px #ff9393, 0 0 60px #ff9393;
+    }
+  }
+  
